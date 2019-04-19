@@ -10,10 +10,9 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+- task: Docker@2
+  inputs:
+    containerRegistry: 'b1e6e329-0821-48fe-ac8a-d5a64985df76'
+    repository: 'cloudbootcamp'
+    command: 'buildAndPush'
   displayName: 'Run a multi-line script'
