@@ -16,4 +16,11 @@ steps:
     repository: 'cloudbootcamp'
     command: 'buildAndPush'
     tags: latest
-  displayName: 'Run a multi-line script'
+  displayName: 'Package Container'
+
+- task: AzureCLI@1
+  inputs:
+    connectedServiceNameARM: 'Visual Studio Enterprise(23d8c84a-ad22-409f-8fe6-d81e2439b47a)'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az container --name cloudbootcamp-austin --resource-group rg-cloudbootcamp'
+  displayName: 'Restart Container'
