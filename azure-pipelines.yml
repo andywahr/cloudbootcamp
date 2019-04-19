@@ -15,4 +15,5 @@ steps:
     containerRegistry: 'b1e6e329-0821-48fe-ac8a-d5a64985df76'
     repository: 'cloudbootcamp'
     command: 'buildAndPush'
+    tags: latest
   displayName: 'Run a multi-line script'
