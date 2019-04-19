@@ -4,10 +4,10 @@ const port = process.env.PORT || '3000';
 
 app.get('/', (req, res) => {
     if ( req.query.name != undefined ){
-        res.send(`Hello Cloud Bootcamp and especially ${req.query.name}!`);
+        res.send(`OH YEA DEVOPS!  Hello Cloud Bootcamp and especially ${req.query.name}!`);
     }
     else {
-        res.send(`Hello Cloud Bootcamp!`);
+        res.send(`OH YEA DEVOPS!  Hello Cloud Bootcamp!`);
     }
 });
 
